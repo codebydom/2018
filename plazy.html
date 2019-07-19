@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112433756-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112433756-1');
+    </script>
+    <title>Code By Dom</title>
+    <link rel="shortcut icon" href="resources/icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Nova+Square" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <script type="text/json" src="resources/data/script2.json"></script>
+    <script type="text/javascript" src="resources/controller.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+    <link media="only screen and (max-device-width: 480px)"
+  href="resources/iphonep.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+  <div id="logo">
+    <a href="home.html"><img src="resources/codebydomlogo.png"></a>
+  </div>
+  <div id="menu-border"> 
+  <div class="table">  
+    <ul id="horizontal">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="code.html">CODE</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="title">
+    <a>Plazy Audio Player</a>
+  </div>
+<div id="agreement">
+  <label class="container">
+  <input id="agree" onclick="agree()" type="checkbox" class="hidden">
+  <span id="check" class="checkmark"></span>
+  </label>
+  <div id="pgree">
+    <p> I have read and fully agree to the <a onclick="uncheck()" href="resources/end-user_license_agreement_codebydom.com.pdf" target="_blank">Terms and Conditions.</a>
+  </p>
+  </div>
+  <div id="contd" class="hidden"><button onclick="failagree()" id="cont"><span>Continue to Plazy</span></button></div>
+</div>
+<div class="hidden" id="playa" ng-app="myApp" ng-controller="myCtrl" ng-init="number=15">
+      <h2 id="audiotitle">J and J 2017 Q1 Earnings Call</h2>
+      <input id="audioselect" class="hidden" value="jnj">
+    <div id="control" class="pause">
+      <i id="pr" onclick="back()" class="material-icons">skip_previous</i>
+      <i id="pp" onclick="pp()" class="material-icons">play_circle_outline</i>
+      <i id="nx" onclick="skip()" class="material-icons">skip_next</i>
+      <p id="travtime"> <span onclick="back()">{{number}}</span><span onclick="pp()"> </span></span><span onclick="skip()">{{number}}</span> </p>
+      <p id="atime"></p>
+    </div>
+    <div id="aud">
+    <audio id="audi" class="a" controls controlsList="nodownload">
+      <source id="asrc" src="resources/jnjq1.mp3" type="audio/mpeg">
+    </audio>
+    </div>
+    <form method="POST" >
+    <div id="cent"><h1> Play Podcast <input maxlength="3" type="text" class="in" id="b4" name="b4" value="5" required> Seconds  Before</div><div id="er"> <h1 id="notop"><input id="word" type="text" name="0" required placeholder="Word/Quote"> is said<input onclick="getword()" type="submit" class="toclick" id='ph' value="Find Quote"><input type="submit" class="hidden" value="Next" id="next" onclick="nexttime()"></div></h1></h1>
+  </form>
+  <div id="nav">
+    <button id="back" onclick="back()" ><i class="material-icons">undo</i></button><input maxlength="3" value="15" id="skipy" type="text" ng-model="number"><p id="isb"><i id="iback"class="material-icons">skip_previous</i>Back<input maxlength="3" value="15" id="skipy2" type="text" ng-model="number"> Skip<i id="iskip" class="material-icons">skip_next</i></button></p><button id="skip" onclick="skip()" > <i class="material-icons">redo</i> </button>
+  </div>
+  <div id="playlist">
+    <div id="lilist">
+    <ol>
+      <li onclick="p1()" id="p1">J and J 2017 Q1 Earnings Call</li>
+      <li onclick="p2()" id="p2">Barstool Pick'Em Gambling Podcast</li>
+      <li onclick="p3()" id="p3">Barstool Rundown Dec. 21 Podcast</li>
+      <li onclick="p4()" id="p4">Comp-Sci 224 Harvard Lecture 1</li>
+      <li onclick="p5()" id="p5">New York Times: The Daily 1/10/2018</li>
+    </ol>
+    </div>
+  </div>
+</div>
+  <div class="hidden" id="dscript">
+    <p id="bc"><span>Business Case:</span> Users can search through the words spoken in the call for the exact time when important financial figures or industry topics are brought up. This is great time-saver for industry, market and company performance research.</p>
+    <p id="dc"><span>Description of Audio:</span> New Brunswick, N.J. (April 18, 2017) – Johnson & Johnson (NYSE: JNJ) today announced sales of $17.8 billion for the first quarter of 2017, an increase of 1.6% as compared to the first quarter of 2016. Operational sales results increased 2.0% and the negative impact of currency was 0.4%. Domestic sales increased 0.6%. International sales increased 2.8%, reflecting operational growth of 3.6% and a negative currency impact of 0.8%. Excluding the net impact of acquisitions and divestitures, on an operational basis, worldwide sales increased 1.2%, domestic sales decreased 0.7% and international sales increased 3.4%.</p>
+  </div>
+  <ul id="hiddenlist" class="hidden">
+  </ul>
+  <div id="f">
+    <p id="ii"><i id="iconsize" class="material-icons">copyright</i></p><p id="footer">2018</p>
+    <p id="name">By Dom Pizzano</p></p>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112433756-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112433756-1');
+    </script>
+    <title>Code By Dom</title>
+    <link rel="shortcut icon" href="resources/icon.png"/>
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Nova+Square|Roboto" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link media="only screen and (max-device-width: 480px)"
+  href="resources/iphone.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+  <div id="logo">
+    <a href="home.html"><img src="resources/codebydomlogo.png"></a>
+  </div>
+  <div id="menu-border"> 
+  <div class="table">  
+    <ul id="horizontal">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="code.html">CODE</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="no" class="buttons">
+    <a class="button"><span>Demos</span></a>
+  </div>
+  <div id="r" class="buttons">
+    <a href="dashboards.html" class="button"><span onmouseover="abtcode(r)" onmouseout="nabtcode()">RoadMap 360 Dashboards</span></a>
+  </div>
+  <div id="p" class="buttons">
+    <a href="plazy.html" class="button"><span onmouseover="abtcode(p)" onmouseout="nabtcode()">Plazy Audio Player</span></a>
+  </div>
+  <div id="i" class="buttons">
+    <a href="plazyv.html" class="button"><span onmouseover="abtcode(i)" onmouseout="nabtcode()">Plazy Video Add-On</span></a>
+  </div>
+  <div id="about" class="about">
+    <p id="aboutcode"></p>
+  </div>
+  <div id="f">
+    <p id="ii"><i id="iconsize" class="material-icons">copyright</i></p><p id="footer">2018</p>
+    <p id="name">By Dom Pizzano</p></p>
+  </div>
+  <script type="text/javascript">
+    function abtcode(x){
+      $(".about").css("display","block");
+      if (x.id=="r"){
+        document.getElementById("aboutcode").innerHTML="RoadMap 360 Dashboards is a software tool that has the ability to visualize millions of records from an SQL database into easy to use data visualization dashboards.</p><p> Users can easily drill down and analyze data to find important insights. This tool is used to gain business insights from data to assist business decision makers.</p><p> I created this product for RoadMap Technologies using only open source software."
+      } else if(x.id=="p"){
+        document.getElementById("aboutcode").innerHTML="Plazy Audio Player is an audio player that allows the users to search through audio for specific words spoken. </p><p> The user can quickly and easily search through up to almost 2 hour long audio recordings for content they want to listen to.</p><p> Plazy transcribes audio with more accuracy and less cost than all other competitors and can be implemented into any company's webpage."
+      } else if(x.id=="i"){
+        document.getElementById("aboutcode").innerHTML="Plazy Video Add-On is an add-on for Youtube or Brightcove embedded videos that allows the user to search through the video for specific words.</p><p> Using the same technology as the audio player, the video add-on allows users to watch the spoken content they searched for.</p><p> This technology allows users to find and consume more relevant content in seconds rather than in minutes."
+      }
+    }
+    function nabtcode(){
+      $(".about").css("display","none");
+    }
+  </script>
+  </body>
+</html>

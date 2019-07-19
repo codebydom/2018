@@ -1,0 +1,260 @@
+body{
+	background-color: black;
+}
+#logo{
+	text-align: center;
+	width: 100%
+}
+#logo img{
+	height: 250px
+}
+.table {
+	width: 50%;
+	text-align:center;
+}
+#vid{
+	display: none;
+}
+#homepic{
+	display: none;
+}
+.home {
+	display: none;
+    margin: 0px !important;
+    border: 0px !important;
+    padding: 0px !important;
+}
+#menu-border{
+	display: none;
+}
+#horizontal{
+	text-align: center;
+	margin: auto;
+	list-style-type: none;
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#f{
+	position: fixed;
+	bottom: 0px;
+	margin-left: 63%;
+	display: none;
+}
+#footer{
+	font-family: 'Nova Square';
+	color: lime;
+	font-size: 136px;
+	z-index:150;
+	text-shadow: -7px 0 black, 0 7px black, 7px 0 green, 0 -7px green;
+	margin-bottom: -5px;
+}
+#name{
+	font-family: 'Nova Square';
+	color: lime;
+	font-size: 35px;
+	margin-left: 28px;
+	margin-top: -10px;
+}
+#iconsize{
+	font-size: 200px;
+	color:#004000;
+	text-shadow:  0 1px black, 0 1px black, 0 0 20px lime, 0 0 20px lime;
+	font-weight: bold;
+}
+#f:focus{
+	outline: 0;
+}
+#ii{
+	margin-bottom: -312px;
+	margin-left: -220px;
+}
+.button{
+	font-size: 100px;
+	text-shadow:  0 1px black, 0 1px black, 0 0 20px lime, 0 0 20px lime;
+}
+#no {
+	display: block;
+}
+#no .button{
+	background-color: black;
+    font-family: 'Nova Square';
+	color: lime;
+	z-index:150;
+	text-shadow: -25px 0 black, 0 25px black, 25px 0 green, 0 -25px green;
+    text-decoration: none;
+    font-size: 130px;
+}
+#title{
+	font-family: 'Nova Square';
+	color: lime;
+	font-size: 136px;
+	z-index:150;
+	text-shadow: -7px 0 black, 0 7px black, 7px 0 green, 0 -7px green;
+	margin-bottom: 100px;
+}
+#disc{
+	font-size: 36px;
+}
+#about{
+	display: none;
+}
+.about{
+	margin:0px auto;
+	text-align: left;
+	width: 95%;
+	border-radius: 10px;
+	border-color: lime;
+	box-shadow: 0 0 25px lime,0 0 2px black;
+	border-style: solid;
+	border-width: 2px;
+	height: 95%;
+	margin-left: 10px;
+
+}
+.about p{
+	color: white;
+	font-family: 'Roboto', cursive;
+	font-size: 42px;
+	font-weight: bold;
+}
+#pgree{
+	color: white;
+	font-family: 'Roboto', cursive;
+	font-size: 100px;
+}
+#agreement{
+	margin: auto;
+	width: 80%;
+	text-align: center;
+	margin-top: 300px;
+}
+.checkmark {
+    position: absolute;
+    top: -180px;
+    left: 315px;
+    height: 150px;
+    width: 150px;
+    background-color: #eee;
+}
+.container .checkmark:after {
+    left:40px;
+    top:0px;
+    width: 50px;
+    height: 100px;
+    border: solid black;
+    border-width: 0 25px 25px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+#cont{
+	background-color: lime;
+	font-size:80px;
+	border: none;
+	color:black;
+	font-family: 'Roboto', cursive;
+	text-align: center;
+	display: inline-block;
+	border-radius: 4px;
+	padding: 20px;
+	width: 100%
+}
+#dscript{
+	display: none;
+}
+#playa{
+    width: 98%;
+    background-color: #F9F9F9;
+    margin: 0 auto;
+    height: 30%;
+    box-shadow: 0 0 25px lime,0 0 20px lime;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 100px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bolder;
+    margin-left: 5px;
+    color:#383838;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#aud {
+	/*display: none;*/
+}
+#pp{
+	color: lime;
+	font-size: 300px;
+	z-index:150;
+	text-shadow: 0 0 20px black;
+}
+#control{
+	text-align: center;
+	display: block;
+}
+#pr{
+	color: lime;
+	font-size: 300px;
+	z-index:150;
+	text-shadow: 0 0 20px black;
+}
+#nx{
+	color: lime;
+	font-size: 300px;
+	z-index:150;
+	text-shadow: 0 0 20px black;
+}
+input[type=text] {
+    padding:5px;
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 100px;
+    font-style: normal;
+    font-variant: normal;
+    color:black;
+    margin-bottom: 0px;
+    font-weight: bolder;
+    font-family: 'Work Sans', sans-serif;
+    text-align: center
+}
+
+input[type=submit] {padding:5px ; background:#ccc; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 100px;
+    font-style: normal;
+    font-weight: bolder;
+    font-variant: normal;
+    color:black;
+    margin-bottom: 0px;
+    font-family: 'Work Sans', sans-serif;
+    
+     }
+input:focus{
+	outline: none;
+}
+#b4{
+	width: 100px;
+}
+#cent{
+	text-align: center;
+}
+#word{
+	width: 920px;
+}
+#cinfo {
+	margin:0px auto;
+	text-align: center;
+}
+#r{
+	text-align: center;
+}
+#cinfo	.button span{
+	font-size: 80px;
+	text-shadow:  0 1px black, 0 1px black, 0 0 20px lime, 0 0 20px lime;
+}

@@ -1,0 +1,83 @@
+body{
+	background-color: black;
+}
+#logo{
+	text-align: center;
+	width: 100%
+}
+#logo img{
+	height: 250px
+}
+li a{
+	background-color: black;
+    font-family: 'Nova Square';
+	color: lime;
+	z-index:150;
+	text-shadow: -7px 0 black, 0 7px black, 7px 0 green, 0 -7px green;
+    text-decoration: none;
+    font-size: 130px;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    font-family: 'Nova Square', cursive;
+    font-weight: bold;
+}
+.table {
+	width: 50%;
+	text-align:center;
+}
+#vid{
+	display: none;
+}
+#homepic{
+	display: none;
+}
+.home {
+	display: none;
+    margin: 0px !important;
+    border: 0px !important;
+    padding: 0px !important;
+}
+#menu-border{
+	text-align: center;
+}
+#horizontal{
+	text-align: center;
+	margin: auto;
+	list-style-type: none;
+	display: block;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#f{
+	position: fixed;
+	bottom: 0px;
+	margin-left: 63%;
+}
+#footer{
+	font-family: 'Nova Square';
+	color: lime;
+	font-size: 136px;
+	z-index:150;
+	text-shadow: -7px 0 black, 0 7px black, 7px 0 green, 0 -7px green;
+	margin-bottom: -5px;
+}
+#name{
+	font-family: 'Nova Square';
+	color: lime;
+	font-size: 35px;
+	margin-left: 28px;
+	margin-top: -10px;
+}
+#iconsize{
+	font-size: 200px;
+	color:#004000;
+	text-shadow:  0 1px black, 0 1px black, 0 0 20px lime, 0 0 20px lime;
+	font-weight: bold;
+}
+#f:focus{
+	outline: 0;
+}
+#ii{
+	margin-bottom: -312px;
+	margin-left: -220px;
+}

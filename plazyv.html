@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112433756-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112433756-1');
+    </script>
+    <title>Code By Dom</title>
+    <link rel="shortcut icon" href="resources/icon.png"/>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Roboto" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Nova+Square" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script type="text/javascript" src="resources/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="resources/controller.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/style.css">
+    <link media="only screen and (max-device-width: 480px)"
+  href="resources/iphonep.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+  <div id="logo">
+    <a href="home.html"><img src="resources/codebydomlogo.png"></a>
+  </div>
+  <div id="menu-border"> 
+  <div class="table">  
+    <ul id="horizontal">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="code.html">CODE</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  </div>
+  <div id="title">
+    <a>Plazy Video Add-On</a>
+  </div>
+<div id="agreement">
+  <label class="container">
+  <input id="agree" onclick="agree()" type="checkbox" class="hidden">
+  <span id="check" class="checkmark"></span>
+  </label>
+  <div id="pgree">
+  <p> I have read and fully agree to the <a onclick="uncheck()" href="resources/end-user_license_agreement_codebydom.com.pdf" target="_blank">Terms and Conditions.</a>
+  </p>
+  </div>
+  <div id="contd" class="hidden"><button onclick="failagree()" id="cont"><span>Continue to Plazy</span></button></div>
+</div>
+</div>
+<div class="hidden" id="vplaya" ng-app="myApp" ng-controller="myCtrl">
+  <div id="video" class="vv">
+  <!-- <h2 id="audiotitle">Comp-Sci 224 Harvard Lecture 1</h2> -->
+  <input id="audioselect" class="hidden" value="lec">
+    <div id="player">
+    </div>
+    <!-- <iframe id="utube" width="900" height="500" src="https://www.youtube.com/embed/0JUN9aDxVmI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen frameborder="5"></iframe> -->
+  </div>
+  <div id="form">
+    <form method="POST" >
+      <div><h1> Play Video <input maxlength="3" type="text" class="in" id="b4" name="b4" value="5" required> Seconds Before</div><div id="said"> <h1 id="notop"><input id="word" type="text" name="0" required placeholder="Word/Quote"> is said<input  onclick="getword()" type="submit" class="toclick" id='ph' value="Find Quote"><input type="submit" class="hidden" value="Next" id="next" onclick="nexttime()"></div></h1></h1>
+    </form>
+  </div>
+  <div id="vlaylist">
+   <button onclick="v2()" id="v2">Harvard Comp-Sci Lecture</button>
+   <button onclick="v1()" id="v1">Joe Rogan Experience w/ Gary V</button>
+   <button onclick="v3()" id="v3">Undisputed Fox Sports Podcast</button>
+  </div>
+</div>
+<ul id="hiddenlist" class="hidden">
+</ul>
+<div id="f">
+    <p id="ii"><i id="iconsize" class="material-icons">copyright</i></p><p id="footer">2018</p>
+    <p id="name">By Dom Pizzano</p></p>
+</div>
+</body>
+</html>
