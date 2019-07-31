@@ -4,7 +4,7 @@ $(document).ready(function(){
 });
 function uno(){
 	var word = document.getElementById('word').value;
-	var link = "http://localhost/codebydom/resources/data/script"+document.getElementById('audioselect').value+".json"
+	var link = "resources/data/script"+document.getElementById('audioselect').value+".json"
 	$.ajax({
 	    type: "GET",
 	    url: link,
@@ -24,7 +24,7 @@ function uno(){
 All of this code was created by Dom Pizzano*/
 function dos(){
 	var words = document.getElementById('word').value.split(" ");
-	var link = "http://localhost/codebydom/resources/data/script"+document.getElementById('audioselect').value+".json"
+	var link = "resources/data/script"+document.getElementById('audioselect').value+".json"
 	$.ajax({
 	    type: "GET",
 	    url: link,
@@ -46,7 +46,7 @@ function dos(){
 All of this code was created by Dom Pizzano*/
 function tre(){
 	var words = document.getElementById('word').value.split(" ");
-	var link = "http://localhost/codebydom/resources/data/script"+document.getElementById('audioselect').value+".json"
+	var link = "resources/data/script"+document.getElementById('audioselect').value+".json"
 	$.ajax({
 	    type: "GET",
 	    url: link,
@@ -68,7 +68,7 @@ function tre(){
 All of this code was created by Dom Pizzano*/
 function qua(){
 	var words = document.getElementById('word').value.split(" ");
-	var link = "http://localhost/codebydom/resources/data/script"+document.getElementById('audioselect').value+".json"
+	var link = "resources/data/script"+document.getElementById('audioselect').value+".json"
 	$.ajax({
 	    type: "GET",
 	    url: link,
@@ -90,7 +90,7 @@ function qua(){
 All of this code was created by Dom Pizzano*/
 function cin(){
 	var words = document.getElementById('word').value.split(" ");
-	var link = "http://localhost/codebydom/resources/data/script"+document.getElementById('audioselect').value+".json"
+	var link = "resources/data/script"+document.getElementById('audioselect').value+".json"
 	$.ajax({
 	    type: "GET",
 	    url: link,
@@ -159,11 +159,25 @@ function getword(){
 		cin();
 	};
 };
+function back2(){
+	$("#pr").css("color","lime")
+	$("#bbb").css("color","black")
+}
+function skip2(){
+	$("#nx").css("color","lime")
+	$("#sss").css("color","black")
+}
 function back(){
 	document.getElementById("audi").currentTime-=parseInt(document.getElementById("skipy").value)
+	setTimeout(back2, 200);
+	$("#pr").css("color","black")
+	$("#bbb").css("color","lime")
 }
 function skip(){
 	document.getElementById("audi").currentTime+=parseInt(document.getElementById("skipy").value)
+	setTimeout(skip2, 200);
+	$("#nx").css("color","black")
+	$("#sss").css("color","lime")
 }
 function pp(){
 	if (!$('#control').hasClass("pause")){
@@ -171,6 +185,7 @@ function pp(){
 		$('#control').addClass("pause")
 		document.getElementById("pp").innerHTML="play_circle_outline"
 	} else {
+		$('form').css("display","block");
 		document.getElementById("audi").play()
 		$('#control').removeClass("pause");
 		document.getElementById("pp").innerHTML="pause_circle_outline"
@@ -187,13 +202,14 @@ player = new YT.Player('player', {
   height: '500',
   width: '900',
   videoId: '0JUN9aDxVmI',
+  playsinline: 1,
 	});
 	}
 function seek(){
 	if (parseInt(document.getElementById("word").name)==document.getElementsByClassName("time").length-1){
 	player.seekTo(Math.floor(document.getElementsByClassName("time")[parseInt(document.getElementById("word").name)].innerHTML-document.getElementById('b4').value));
-	console.log("sneeky");
 	player.playVideo();
+        $("#next").addClass("hidden");
 	} else {
 	player.seekTo(Math.floor(document.getElementsByClassName("time")[parseInt(document.getElementById("word").name)].innerHTML-document.getElementById('b4').value));
 	document.getElementById("word").name = String(parseInt(document.getElementById("word").name)+1);
@@ -205,9 +221,6 @@ function timecheck() {
 	    var hr = Math.floor(document.getElementById("audi").currentTime/3600);
 		var min = Math.floor(document.getElementById("audi").currentTime/60);
 		var sec = Math.floor(document.getElementById("audi").currentTime%60);
-		var dhr = Math.floor(document.getElementById("audi").duration/3600);
-		var dmin = Math.floor(document.getElementById("audi").duration/60);
-		var dsec = Math.floor(document.getElementById("audi").duration%60);
 		if (min>=60){
 			min=String(min-60);
 		}
@@ -220,20 +233,7 @@ function timecheck() {
 		if (hr<10){
 			hr="0"+String(hr);
 		};
-		if (dmin>=60){
-			dmin=String(dmin-60);
-		}
-		if (dsec<10){
-			dsec="0"+String(dsec);
-		} 
-		if (dmin<10){;
-			dmin="0"+String(dmin);
-		};
-		if (dhr<10){
-			dhr="0"+String(dhr);
-		};
-		var dur = dhr+":"+dmin+":"+dsec
-		document.getElementById("atime").innerHTML=hr+":"+min+":"+sec+" | "+dur;
+		document.getElementById("atime").innerHTML=hr+":"+min+":"+sec+" | "+document.getElementById("dur").value
 		if ($('li').hasClass("time")&&document.getElementById("word").name!="Done"){
 			if (document.getElementById("audi").currentTime>parseInt(document.getElementsByClassName("time")[parseInt(document.getElementById("word").name)].innerHTML)){
 				if (parseInt(document.getElementById("word").name)>=document.getElementsByClassName("time").length-1){
@@ -252,14 +252,13 @@ function timecheck() {
 					$("#next").addClass("hidden");
 				} else {
 					document.getElementById("word").name = String(parseInt(document.getElementById("word").name)+1);
-					console.log("axed");
 		}
 		}
 		}
 	}
 }
 /* Please refer to the end user agreement at codebydom.com/plazy.html before looking at this code.
-All of this code was created by Dom Pizzano*/
+All of this code was created by Dom Pizzano okay*/
 function p1(){
 	$("#aud").load(location.href + " #audi",function(){
 		document.getElementById("asrc").src = "resources/jnjq1.mp3";
@@ -348,7 +347,6 @@ function v2(){
 	document.getElementById("audioselect").value="lec"
 };
 function v3(){
-	// document.getElementById("utube").src="https://www.youtube.com/embed/TJUhicWfLxc"
 	player.loadVideoById("TJUhicWfLxc")
 	document.getElementById("audioselect").value="und"
 };
